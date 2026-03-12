@@ -1,0 +1,7 @@
+tensorflow
+gradio
+librosa
+scikit-learn
+matplotlib
+gTTS
+opencv-python-headless
