@@ -1,0 +1,27 @@
+{
+    "version": "7.0",
+    "emotions": [
+        "anger",
+        "fear",
+        "joy",
+        "Natural",
+        "sadness",
+        "surprise"
+    ],
+    "num_classes": 6,
+    "img_size": 224,
+    "audio_shape": [
+        40,
+        128,
+        3
+    ],
+    "ravdess_to_asd": {
+        "01": "Natural",
+        "03": "joy",
+        "04": "sadness",
+        "05": "anger",
+        "06": "fear",
+        "08": "surprise"
+    },
+    "saved_at": "2026-04-04 20:29:48.452715"
+}
