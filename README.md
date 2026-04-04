@@ -1,3 +1,17 @@
+**Multimodal Emotion AI for ASD Support** (Post-Publication Engineering)
+A production-grade emotion recognition system designed to support autistic adolescents by detecting emotional states in real time through facial expressions and vocal cues.
+
+Architecture: EfficientNet-B0 (vision) + MFCC-CNN (audio) with attention-gated fusion, trained on RAVDESS and the Autistic Children Emotions dataset across six emotion classes: anger, fear, joy, sadness, surprise, and neutral.
+
+Explainability: Guided Grad-CAM (4 artefacts per inference) for vision and SHAP DeepExplainer for audio, enabling transparent, interpretable predictions suitable for clinical and educational settings.
+
+Outputs: Fused emotion probabilities, adaptive behavioural intervention plans, visual schedule cards, and TTS audio guidance — all contextualised by environment, routine, and time of day.
+
+Use case: Assistive AI for therapists, educators, and caregivers working with autistic adolescents in school, home, and therapy settings.
+
+
+
+
 # Emotionally-Adaptive-AI-Companions-for-Autism-Routine-Support
 Research on emotionally adaptive AI companions designed to assist autistic adolescents with routine management through personalised and emotion-aware interaction.
 
