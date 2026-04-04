@@ -1,0 +1,31 @@
+{
+    "model": "JointModel",
+    "n_samples": 75,
+    "accuracy": 0.6267,
+    "precision_weighted": 0.7405,
+    "recall_weighted": 0.6267,
+    "f1_weighted": 0.6294,
+    "roc_auc_weighted": 0.9264,
+    "pr_auc_mean": 0.7916,
+    "mcc": 0.5577,
+    "f1_per_class": {
+        "anger": 0.7407,
+        "fear": 0.7586,
+        "joy": 0.5238,
+        "Natural": 0.25,
+        "sadness": 0.5217,
+        "surprise": 0.7619
+    },
+    "pr_auc_per_class": {
+        "anger": 0.9189,
+        "fear": 0.9604,
+        "joy": 0.685,
+        "Natural": 0.6003,
+        "sadness": 0.6137,
+        "surprise": 0.9713
+    },
+    "gate_mean": 0.4129,
+    "gate_std": 0.0193,
+    "gate_min": 0.3527,
+    "gate_max": 0.437
+}

@@ -1,0 +1,26 @@
+{
+    "model": "VisionModel",
+    "accuracy": 0.6933,
+    "precision_weighted": 0.6087,
+    "recall_weighted": 0.6933,
+    "f1_weighted": 0.6445,
+    "roc_auc_weighted": 0.8973,
+    "pr_auc_mean": 0.4755,
+    "mcc": 0.4735,
+    "f1_per_class": {
+        "anger": 0.0,
+        "fear": 0.0,
+        "joy": 0.8723,
+        "Natural": 0.1667,
+        "sadness": 0.5185,
+        "surprise": 0.5455
+    },
+    "pr_auc_per_class": {
+        "anger": 0.5587,
+        "fear": 0.0478,
+        "joy": 0.9526,
+        "Natural": 0.2074,
+        "sadness": 0.4518,
+        "surprise": 0.6344
+    }
+}
