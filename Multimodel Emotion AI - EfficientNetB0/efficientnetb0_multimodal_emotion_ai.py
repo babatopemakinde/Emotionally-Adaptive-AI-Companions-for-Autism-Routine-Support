@@ -22,50 +22,6 @@ Original file is located at
  Modalities: Facial (EfficientNetB0) + Audio (MFCC-CNN)
  Explainability: Full Grad-CAM (vision, 4 artefacts) + SHAP (audio)
  Deployment: Gradio UI
-
- REWRITE NOTES v6.0 → v7.0
- ─────────────────────────────────────────────────────────────────────
- FIX-01  ModelCheckpoint: removed invalid `save_format` kwarg entirely.
-         Keras controls format via file extension only:
-           • ".keras" → Keras v3 native format  (TF ≥ 2.12, recommended)
-           • ".h5"    → legacy HDF5             (always available)
-         No save_format= argument is ever passed to ModelCheckpoint.
-
- FIX-02  Final model saves use model.save(path) only — not the older
-         tf.saved_model.save() API which triggers _DictWrapper errors
-         on multi-output / custom-layer models.
-
- FIX-03  Checkpoint directories are created with parents=True,
-         exist_ok=True before any ModelCheckpoint is constructed.
-
- FIX-04  All training functions return the trained tf.keras.Model
-         (not history, not a wrapper). History objects are discarded
-         unless explicitly needed for plotting.
-
- FIX-05  _assert_keras_model() guards every save/GradCAM entry point.
-         Raises RuntimeError with a clear message on type mismatch.
-
- FIX-06  Lambda layers fully replaced by named Layer subclasses with
-         get_config() — required for model.save() with custom graphs.
-
- FIX-07  GradientTape scope: class_loss is selected from the raw logit
-         tensor INSIDE the tape context, BEFORE any .numpy() call,
-         ensuring gradients are never None.
-
- FIX-08  Joint generator: iter()-based face loop, correct float32 label
-         blending, explicit shape assertions.
-
- FIX-09  CosineDecay training stage: ReduceLROnPlateau removed from
-         callbacks when a schedule-based LR is already in use.
-
- FIX-10  Grad-CAM and SHAP outputs are written to disk only.
-         Gradio UI is unchanged — shows text path summary.
-
- FIX-11  SHAP output normalisation handles all known return shapes from
-         DeepExplainer across different TF/SHAP version combinations.
-
- FIX-12  collect_val_arrays uses batch-count guard (generators cycle
-         infinitely; iterating on .n // batch_size is unreliable).
 =============================================================================
 """
 
